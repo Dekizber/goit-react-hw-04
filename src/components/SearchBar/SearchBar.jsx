@@ -1,3 +1,4 @@
+import s from "./SearchBar.module.css";
 import { Formik, Form, Field } from "formik";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -11,8 +12,9 @@ const SearchBar = ({ handleChangeQuery }) => {
   return (
     <>
       <Formik onSubmit={handleSubmit} initialValues={{ query: "" }}>
-        <Form>
+        <Form className={s.formContainer}>
           <Field
+            className={s.field}
             type="text"
             name="query"
             placeholder="Search images and photos"

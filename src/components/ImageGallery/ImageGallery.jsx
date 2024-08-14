@@ -1,14 +1,13 @@
 import ImageCard from "../ImageCard/ImageCard";
+import s from "./ImageGallery.module.css";
 
-const ImageGallery = ({ image }) => {
-  console.log(image);
-
+const ImageGallery = ({ image, handleOpenModal }) => {
   return (
-    <ul>
+    <ul className={s.list}>
       {image.map((item) => {
         return (
-          <li key={item.id}>
-            <ImageCard {...item} />
+          <li className={s.item} key={item.id}>
+            <ImageCard {...item} handleOpenModal={handleOpenModal} />
           </li>
         );
       })}

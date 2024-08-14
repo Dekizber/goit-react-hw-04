@@ -9,6 +9,7 @@ const fetchImages = async (query, page) => {
 			orientation: 'landscape',
 		},
 	});
+	console.log(data);
 
 	return data;
 };
